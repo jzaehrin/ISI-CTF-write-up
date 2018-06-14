@@ -20,12 +20,6 @@ Ciphertext: m:j
 
 Plaintext: y
 Ciphertext: e:z
-
-Plaintext: a
-Ciphertext: r:o
-
-Plaintext: a
-Ciphertext: g:d
 ```
 La lettre chiffré semble donc dépendre de la lettre précédant **:**.
 2. Lorsque l'on envoie la lettre **b**, on obtient systématiquement la même lettre à double :
@@ -35,13 +29,20 @@ Ciphertext: q:q
 
 Plaintext: d
 Ciphertext: g:g
-
-Plaintext: d
-Ciphertext: v:v
-
-Plaintext: d
-Ciphertext: e:e
 ```
 Une clé incunnu doit également intervenir dans le chiffrement, et il semble que son premier caractère aie un lien avec la lettre **d**.
+3. Lorsque l'on envoie les mêmes deux lettres plusieurs fois, la deuxième lettre chiffrée est toujours la même :
+```
+Plaintext: aa
+Ciphertext: d:ai
+
+Plaintext: aa
+Ciphertext: h:ei
+```
+On est sûr à présent que le chiffrement de chaque lettre dépend de la lettre précédente (la lettre avant '**:**' pour la première), et de la clé.
+### Démarche de résolution
+#### Trouver la clé
+Afin de trouver *la clé*, il peut être intéressant de trouver tout d'abord la lettre qui, une fois chiffrée, vaut la lettre précédente à chaque étape.
+
 
 
