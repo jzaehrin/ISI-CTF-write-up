@@ -13,3 +13,8 @@ Liste des marches à suivre :
 * [__pwn__ - Débordement](debordement.md)
 * [__crypto__ - Oracle](oracle.md)
 * [__crypto__ - Perfect secrecy](perfect_secrecy.md)
+
+Autheurs : 
+* Filipe (capito27) Fortunato 
+* Jonathan (jzaehrin) Zaehringer
+* Pierre (pete842) Kohler 
