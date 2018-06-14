@@ -2,7 +2,7 @@
 
 ## Contexte
 Ce challenge est composé :
-+ D'un fichier texte contenant le texte chiffré `e:grrlqtoocaympckcbqapqxclemipaihipzgxtuyzoahabtcokz sskujhkewo`
++ D'un fichier texte contenant le texte chiffré `k:mrrlqtoocaympckcbqapqxclemipaihipzgxtuyzoahabtcokz sskujhkewo`
 + D'un flux de chiffrement (accessible via `netcat` sur le port 9000 du serveur 10.10.40.200)
 
 ## Analyse
@@ -43,8 +43,37 @@ Ciphertext: h:ei
 ```
 On est sûr à présent que le chiffrement de chaque lettre dépend de la lettre précédente (la lettre avant '**:**' pour la première), et de la clé.
 ### Démarche de résolution
+#### Comprendre le chiffrement
+Essayons de comprendre le fonctionnement du chiffrement à l'aide des échanges suivants :
+```
+Plaintext: a     (0)
+
+Ciphertext: c:   ( 2:26)
+Ciphertext: s:p  (18:15)
+Ciphertext: x:u  (23:20)
+```
+Les indications entre parenthèses correspondent à l'index des lettres dans l'alphabet [a-b, ' '].
+
+Sachant que la lettre **d** (3) intervient dans le chiffrement, on peut émettre l'hypothèse que le calcule effectuer est :
+```
+(lettre chiffrée) = (lettre claire) + (lettre précédente) - (première lettre de la clé) mod(taille alphabet)
+```
+Vérification :
+```
+26 = 0 +  2 - 3 mod(27) = -1 mod(27) ☑
+15 = 0 + 18 - 3 mod(27) = 15 mod(27) ☑
+20 = 0 + 23 - 3 mod(27) = 20 mod(27) ☑
+```
+
 #### Trouver la clé
-Afin de trouver *la clé*, il peut être intéressant de trouver tout d'abord la lettre qui, une fois chiffrée, vaut la lettre précédente à chaque étape.
+Afin de trouver *la clé*, il suffit donc trouver tout d'abord la lettre qui, une fois chiffrée, vaut la lettre précédente à chaque étape.
+
+#### Décrypter le texte chiffré fourni
+Avec la clé, on peut décrypter un caractère en inversant l'opération de l'hypothèse précédente (généralisée) :
+```
+(lettre chiffrée) = (lettre claire) + (lettre précédente) - (lettre de la clé [position]) mod(taille alphabet)
+(lettre claire) = (lettre chiffrée) - (lettre précédente) + (lettre de la clé [position]) mod(taille alphabet)
+```
 
 
 
