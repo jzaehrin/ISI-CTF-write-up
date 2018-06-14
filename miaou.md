@@ -1,6 +1,8 @@
 # Forensic - Miaou
 En ouvrant le fichier fourni `"Shadow"`, nous pouvons voir divers hash de mots de passe systeme unix.
+
 Le titre du challenge nous donne un indice quant à l'utilisation de `hashcat` pour casser ce mot de passe.
+
 En regardant la ligne du fichier contenant le compte `admin`.
 
 ```
@@ -14,7 +16,7 @@ Nous connaissons désormais l'algorithme à brute-forcer, maintenant il faut dé
 
 Nous pouvons deviner que le mot de passe contient probablement la balise de flag `ISI18{...}`.
 
-Avec cette connaissance, ainsi que le fait que ce challenge doit être faisable en une dizaine de minutes, nous pouvons deviner 3 types possibles de mots de passe : 
+Avec cette connaissance, ainsi que le fait que ce challenge doit être faisable en une dizaine de minutes, nous pouvons deviner 4 types possibles de mots de passe : 
 
 1. un mot de passe jusqu'à 2 caractères ASCII aléatoires
 2. un mot de passe jusqu'à 3 caractères alphanumériques de casse quelconque
