@@ -8,9 +8,9 @@ Ce challenge est composé :
 ## Analyse
 ### Texte chiffré fourni
 1. Le texte chiffré fourni débute par un caractère alphabetique suivi de **:** , ainsi que d'une suite de caractères alphabétiques et d'espaces.
-⋅⋅⋅ On peut penser que le premier caractère et les deux points qui suivent sont des paramètres, et n'appartiennent donc pas au texte clair.
+On peut penser que le premier caractère et les deux points qui suivent sont des paramètres, et n'appartiennent donc pas au texte clair.
 
-2. D'après l'hypothèse du premier point, l'alphabet doit donc être [a-z,' '].
+2. D'après l'hypothèse du premier point, l'alphabet probablement être [a-z,' '].
 
 ### Flux de chiffrement
 1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie :
@@ -27,7 +27,7 @@ Ciphertext: r:o
 Plaintext: a
 Ciphertext: g:d
 ```
-⋅⋅⋅ La lettre chiffré semble donc dépendre de la lettre précédant **:**.
+La lettre chiffré semble donc dépendre de la lettre précédant **:**.
 2. Lorsque l'on envoie la lettre **b**, on obtient systématiquement la même lettre à double :
 ```
 Plaintext: d
@@ -42,6 +42,6 @@ Ciphertext: v:v
 Plaintext: d
 Ciphertext: e:e
 ```
-⋅⋅⋅ Une clé incunnu doit également intervenir dans le chiffrement, et il semble que son premier caractère aie un lien avec la lettre **d**.
+Une clé incunnu doit également intervenir dans le chiffrement, et il semble que son premier caractère aie un lien avec la lettre **d**.
 
 
