@@ -15,6 +15,9 @@ Liste des marches à suivre :
 * [__crypto__ - Perfect secrecy](perfect_secrecy.md)
 
 Autheurs : 
-* Filipe (capito27) Fortunato 
-* Jonathan (jzaehrin) Zaehringer
-* Pierre (pete842) Kohler 
+  
+  Filipe (capito27) Fortunato 
+  
+  Jonathan (jzaehrin) Zaehringer
+  
+  Pierre (pete842) Kohler 
