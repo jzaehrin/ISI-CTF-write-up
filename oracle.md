@@ -7,5 +7,18 @@ Ce challenge est composé :
 
 ## Analyse
 ### Flux de chiffrement
-Première observation : 
-Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie.
+1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie.
+```
+Plaintext: a
+Ciphertext: m:j
+
+Plaintext: y
+Ciphertext: e:z
+
+Plaintext: a
+Ciphertext: r:o
+
+Plaintext: a
+Ciphertext: g:d
+```
+
