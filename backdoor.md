@@ -33,5 +33,3 @@ En la mettant en temps que `secret_backdoor`, (après avoir changé sa casse), l
 ```
 <--  username = admin, password = c3eUxw94aoMd !>
 ```
-
-En se connectant avec ces données, le flag nous est donné.
