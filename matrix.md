@@ -9,6 +9,6 @@ Dès lors, il est bien d'aller voir les cookies du site web, nous trouvons plusi
 * access
 
 Deux d'entre eux sont utilisé pour la gestion de la Session, il n'est pas intéressant pour ce challenge.
-Mais le champ `access` peut être intéressant, il semble générer de manière aléatoire si le cookie n'est pas présent.
+Mais le champ `access` peut être intéressant, il semble être généré de manière aléatoire, si le cookie n'est pas présent.
 Le titre `Matrix` nous donne un indice, il serait judicieux de vouloir tester l'accès `0`.
 

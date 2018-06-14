@@ -27,7 +27,7 @@ En essayant ces 8 possibilités (avec ou sans balise), il est possible de trouve
 
 La commande hashcat permettant de trouver le flag est :
 
-```
+```bash
 hashcat -m 1800 -a 3 ./shadow -o ./solution.txt ISI18{?d?d?d?d?d}
 ```
 
