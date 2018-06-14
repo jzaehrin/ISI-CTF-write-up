@@ -60,9 +60,9 @@ Sachant que la lettre **d** (3) intervient dans le chiffrement, on peut émettre
 ```
 Vérification :
 ```
-26 = 0 +  2 - 3 mod(27) = -1 mod(27) ☑
-15 = 0 + 18 - 3 mod(27) = 15 mod(27) ☑
-20 = 0 + 23 - 3 mod(27) = 20 mod(27) ☑
+26 = 0 +  2 - 3 mod(27) = -1 mod(27) ✓
+15 = 0 + 18 - 3 mod(27) = 15 mod(27) ✓
+20 = 0 + 23 - 3 mod(27) = 20 mod(27) ✓
 ```
 
 #### Trouver la clé
