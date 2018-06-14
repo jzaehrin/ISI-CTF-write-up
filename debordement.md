@@ -2,16 +2,15 @@
 ## Contexte
 Il suffit d'exploiter le code c fournit afin d'ouvrir un *shell* sur le serveur cible, ce qui doit ensuite permettre de récupérer le flag.
 ## Analyse
-Voici le code c fournit :
+Voici le code c fournit (simplifié et commenté) :
 ```c
 int main(int argc, char **argv) {
-    int value_to_overwrite = 0x12345678;
-    char buffer[B_SIZE];
-    setvbuf(stdout, NULL, _IONBF, 0);
+    int value_to_overwrite = 0x12345678; // valeur à écraser
+    char buffer[B_SIZE];                 // buffer à exploiter
 
     printf("Valeur de l'adresse: 0x%x\n", value_to_overwrite);
     printf("Input : ");
-    scanf("%s", buffer);
+    scanf("%s", buffer); // vulnérabilité !
 
     printf("Valeur de l'adresse: 0x%x\n", value_to_overwrite);
     if (value_to_overwrite == 0xdeadbeef){
