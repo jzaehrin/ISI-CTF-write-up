@@ -56,7 +56,7 @@ Les indications entre parenthèses correspondent à l'index des lettres dans l'a
 
 Sachant que la lettre **d** (3) intervient dans le chiffrement, on peut émettre l'hypothèse que le calcule effectuer est :
 ```
-(lettre chiffrée) = (lettre claire) + (lettre précédente) - (première lettre de la clé) mod(taille alphabet)
+(lettre chiffrée) = (lettre claire) + (lettre précédente) - (clé[0]) mod(taille alphabet)
 ```
 Vérification :
 ```
@@ -71,8 +71,8 @@ Afin de trouver *la clé*, il suffit donc trouver tout d'abord la lettre qui, un
 #### Décrypter le texte chiffré fourni
 Avec la clé, on peut décrypter un caractère en inversant l'opération de l'hypothèse précédente (généralisée) :
 ```
-(lettre chiffrée) = (lettre claire) + (lettre précédente) - (lettre de la clé [position]) mod(taille alphabet)
-(lettre claire) = (lettre chiffrée) - (lettre précédente) + (lettre de la clé [position]) mod(taille alphabet)
+(lettre chiffrée) = (lettre claire) + (lettre précédente) - (clé[position]) mod(taille alphabet)
+(lettre claire) = (lettre chiffrée) - (lettre précédente) + (clé[position]) mod(taille alphabet)
 ```
 
 
