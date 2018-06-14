@@ -19,7 +19,7 @@ ESGTW YHJXV FAUTS RWKCS FIYTN NUAGT XAQSW WARRC QFQHE GSHGL BVWKV PSTDN TWKQJ BU
 
 Le challenge est nommé `Perfect Secrecy`, donc nous pouvons assez facilement deviner qu'il s'agit de chiffrement de Vernam.
 
-Nous pouvons confirmer cela avec un certain degré de confiance en passant un test d'Indice de coïncidence, pour confirmer un contenu aléatoire sans grand biais, et donc n'utilise pas un chiffrement de Vigenère avec clé raisonnable.
+Nous pouvons confirmer cela avec un certain degré de confiance en passant un test d'[Indice de coïncidence](https://fr.wikipedia.org/wiki/Indice_de_co%C3%AFncidence), pour confirmer un contenu aléatoire sans grand biais, et donc n'utilise pas un chiffrement de Vigenère avec clé raisonnable.
 
 Un indice est présent dans la donnée :
 
