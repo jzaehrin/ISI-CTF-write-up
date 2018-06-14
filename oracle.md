@@ -10,7 +10,7 @@ Ce challenge est composé :
 1. Le texte chiffré fourni débute par un caractère alphabetique suivi de **:** , ainsi que d'une suite de caractères alphabétiques et d'espaces.
 On peut penser que le premier caractère et les deux points qui suivent sont des paramètres, et n'appartiennent donc pas au texte clair.
 
-2. D'après l'hypothèse du premier point, l'alphabet probablement être [a-z,' '].
+2. D'après l'hypothèse du premier point, l'alphabet est probablement [a-z,' '].
 
 ### Flux de chiffrement
 1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie :
