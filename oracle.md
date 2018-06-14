@@ -22,6 +22,7 @@ Plaintext: y
 Ciphertext: e:z
 ```
 La lettre chiffré semble donc dépendre de la lettre précédant **:**.
+
 2. Lorsque l'on envoie la lettre **b**, on obtient systématiquement la même lettre à double :
 ```
 Plaintext: d
@@ -31,6 +32,7 @@ Plaintext: d
 Ciphertext: g:g
 ```
 Une clé incunnu doit également intervenir dans le chiffrement, et il semble que son premier caractère aie un lien avec la lettre **d**.
+
 3. Lorsque l'on envoie les mêmes deux lettres plusieurs fois, la deuxième lettre chiffrée est toujours la même :
 ```
 Plaintext: aa
