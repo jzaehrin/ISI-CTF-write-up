@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
 
     printf("Valeur de l'adresse: 0x%x\n", value_to_overwrite);
     printf("Input : ");
-    scanf("%s", buffer); // vulnérabilité !
+    scanf("%s", buffer); // vulnérabilitée !
 
     printf("Valeur de l'adresse: 0x%x\n", value_to_overwrite);
     if (value_to_overwrite == 0xdeadbeef){
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 ```
-On doit donc évidemment effectuer une attaque par débordement sur `buffer` afin de modifier la valeure stockée dans `value_to_overwrite`.
+On doit donc évidemment effectuer une attaque par débordement sur `buffer` afin de modifier la valeur stockée dans `value_to_overwrite`.
 
 ## Démarche de résolution
 Pour résoudre ce challenge, il faut :
