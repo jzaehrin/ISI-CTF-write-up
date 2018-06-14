@@ -16,19 +16,17 @@ On peut penser que le premier caractère et les deux points qui suivent sont des
 1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie :
 ```
 Plaintext: a
-Ciphertext: m:j
 
-Plaintext: y
-Ciphertext: e:z
+Ciphertext: s:p
+Ciphertext: x:u
 ```
 La lettre chiffré semble donc dépendre de la lettre précédant **:**.
 
-2. Lorsque l'on envoie la lettre **b**, on obtient systématiquement la même lettre à double :
+2. Lorsque l'on envoie la lettre **d**, on obtient systématiquement la même lettre à double :
 ```
 Plaintext: d
-Ciphertext: q:q
 
-Plaintext: d
+Ciphertext: q:q
 Ciphertext: g:g
 ```
 Une clé incunnu doit également intervenir dans le chiffrement, et il semble que son premier caractère aie un lien avec la lettre **d**.
@@ -36,9 +34,8 @@ Une clé incunnu doit également intervenir dans le chiffrement, et il semble qu
 3. Lorsque l'on envoie les mêmes deux lettres plusieurs fois, la deuxième lettre chiffrée est toujours la même :
 ```
 Plaintext: aa
-Ciphertext: d:ai
 
-Plaintext: aa
+Ciphertext: d:ai
 Ciphertext: h:ei
 ```
 On est sûr à présent que le chiffrement de chaque lettre dépend de la lettre précédente (la lettre avant '**:**' pour la première), et de la clé.
