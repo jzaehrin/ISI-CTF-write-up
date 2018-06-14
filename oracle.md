@@ -7,7 +7,7 @@ Ce challenge est composé :
 
 ## Analyse
 ### Flux de chiffrement
-1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie.
+1. Lorsque l'on envoie le même caractère au flux de chiffrement à plusieurs reprises, on peut constater que le *ciphertext* reçu en retour varie :
 ```
 Plaintext: a
 Ciphertext: m:j
@@ -21,4 +21,20 @@ Ciphertext: r:o
 Plaintext: a
 Ciphertext: g:d
 ```
+... La lettre chiffré semble donc dépendre de la lettre précédant **:**.
+2. Lorsque l'on envoie la lettre **b**, on obtient systématiquement la même lettre à double :
+```
+Plaintext: d
+Ciphertext: q:q
+
+Plaintext: d
+Ciphertext: g:g
+
+Plaintext: d
+Ciphertext: v:v
+
+Plaintext: d
+Ciphertext: e:e
+```
+... Une clé incunnu doit également intervenir dans le chiffrement, et il semble probable que son premier caractère aie un lien avec la lettre **d**.
 
