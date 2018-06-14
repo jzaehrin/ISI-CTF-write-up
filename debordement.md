@@ -27,13 +27,13 @@ On doit donc évidemment effectuer une attaque par débordement sur `buffer` afi
 
 ## Démarche de résolution
 Pour résoudre ce challenge, il faut :
-1. Trouver la taille de `buffer`.
+1. Trouver la taille de `buffer` : 
     
    Entrer un certain nombre de 'a', suivi de trois 'b', puis augmenter le nombre de 'a' jusqu'à voir 0x626262 exactement dans `value_to_overwrite`.
-2. Écrire convenablement `0xdeadbeef` afin de l'insérer (par débordement) dans `value_to_overwrite`.
+2. Écrire convenablement `0xdeadbeef` afin de l'insérer (par débordement) dans `value_to_overwrite` :
    
    Les valeurs seront insérer à l'envers dans la stack, soit en *little-endian*.
-3. Parvenir à transmettre *l'exploit* ainsi construit afin de pouvoir envoyer des commandes au *shell*.
+3. Parvenir à transmettre *l'exploit* ainsi construit afin de pouvoir envoyer des commandes au *shell* :
    
    Pour éviter le *copier/coller* qui pourrait poser problème avec certains caractère spéciaux correspondant aux valeurs de `0xdeadbeef`, il est impératif de `pipe` directement *l'exploit* à la commande netcat.
    Mais cela empêche ensuite la communication avec le *shell*. 
