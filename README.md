@@ -1,4 +1,4 @@
-# ISI-CTF-write-up
+# ISI18 : CTF Write Up
 Toutes les marches à suivre des challenges du CTF du cours d'ISI 2018 à l'HEIG-VD Yverdon
 
 Liste des marches à suivre :
